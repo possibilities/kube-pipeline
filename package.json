@@ -1,0 +1,28 @@
+{
+  "name": "kube-pipeline",
+  "description": "Tools for creating pipelines using Kubernetes Jobs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/possibilities/kube-pipeline"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/possibilities/kube-pipeline/issues"
+  },
+  "homepage": "https://github.com/possibilities/kube-pipeline",
+  "version": "0.3.10",
+  "main": "./index.js",
+  "scripts": {
+    "test": "kubectl delete jobs --selector heritage=kube-pipeline && node test",
+    "pretest": "standard",
+    "lint": "standard"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "kube-client": "^0.3.10",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
